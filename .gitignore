@@ -32,6 +32,10 @@ MANIFEST
 *.manifest
 *.spec
 
+secrets.json
+.idea
+experiments/uk_ner_web_trf_13class
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
