@@ -31,10 +31,6 @@ def clean_PERS(entity: str) -> str | None:
     if re.search(r'[«»]', text):
         return None
 
-    # Rule 4: Exclude if the word is a pronoun
-    if contains_pronoun_stanza(text):
-        return None
-
     # Rule 2: No digits
     if any(ch.isdigit() for ch in text):
         return None
@@ -44,6 +40,10 @@ def clean_PERS(entity: str) -> str | None:
     for token in tokens:
         if not token or not token[0].isupper():
             return None
+
+    # Rule 4: Exclude if the word is a pronoun
+    if contains_pronoun_stanza(text):
+        return None
 
     return entity
 

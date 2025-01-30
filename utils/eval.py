@@ -49,15 +49,18 @@ def calculate_f1_score(df):
 def read_and_format_results(base_dir):
     experiments = ["zero_shot", "few_shot", "cot"]
     model_mappings = {
-        "Llama-3b.csv": "Llama-3.2-3B-Instruct",
+        "llama_3b.csv": "Llama-3.2-3B-Instruct",
+        "llama_8b.csv": "Llama-3.1-8B-Instruct",
         "gemma_2b.csv": "Gemma-2-2B-IT",
         "gemma_9b.csv": "Gemma-9-9B-IT",
+        "gemma_27b.csv": "Gemma-9-27B-IT",
         "4o.csv": "GPT-4o",
         "phi_4.csv": "Phi-4",
         "Phi-3-mini-4k.csv": "Phi-3-mini-4k-instruct",
-        "qwen_3b.csv": "Qwen-2.5-3B",
-        "qwen_7b.csv": "Qwen-2.5-7B",
-        "qwen_14b.csv": "Qwen-2.5-14B"
+        "qwen_3b.csv": "Qwen-2.5-3B-Instruct",
+        "qwen_7b.csv": "Qwen-2.5-7B-Instruct",
+        "qwen_14b.csv": "Qwen-2.5-14B-Instruct",
+        "deep_seek_14b.csv": "DeepSeek-R1-Distill-Qwen-14B"
     }
 
     results = {model: {"Zero-Shot": "TBD", "Few-Shot": "TBD", "Cot": "TBD"} for model in model_mappings.values()}
