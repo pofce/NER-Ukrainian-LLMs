@@ -21,7 +21,6 @@ def evaluate_ner(df, is_llm=True):
                 if not any(used[start:end]):
                     used[start:end] = [True] * (end - start)
                     results.append((start, end, label))
-                    break
         return sorted(results, key=lambda x: x[0])
 
     nlp = spacy.blank("en")
