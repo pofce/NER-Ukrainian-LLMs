@@ -20,6 +20,11 @@ NER-Ukrainian-LLMs/
 │   ├── sft/                         # Supervised fine-tuning experiments
 │   └── eda.ipynb                    # Exploratory data analysis
 │
+├── playground/                      # Evaluation and utility notebooks
+│   ├── gliner_eval.ipynb            # GLiNER-specific evaluation
+│   ├── prompt_eval.ipynb            # Evaluation of prompting strategies
+│   └── sft_eval.ipynb               # Evaluation of supervised fine-tuning
+│
 ├── results/
 │   ├── prompting/
 │   │    ├── bronze/                 # Raw outputs
